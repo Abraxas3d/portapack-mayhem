@@ -81,6 +81,9 @@
 #include "soundboard_app.hpp"
 #include "tpms_app.hpp"
 
+#include "ui_opulent_voice.hpp"
+
+
 #include "core_control.hpp"
 #include "ui_looking_glass_app.hpp"
 #include "file.hpp"
@@ -512,6 +515,7 @@ TransmittersMenuView::TransmittersMenuView(NavigationView& nav) {
 		{ "BurgerPgr",		ui::Color::yellow(), 	&bitmap_icon_burger,	[&nav](){ nav.push<CoasterPagerView>(); } },
 		//{ "Nuoptix DTMF", 	ui::Color::green(),		&bitmap_icon_nuoptix,	[&nav](){ nav.push<NuoptixView>(); } },
 		{ "OOK",			ui::Color::yellow(),	&bitmap_icon_remote,	[&nav](){ nav.push<EncodersView>(); } },
+		{ "OPV",		ui::Color::red(),	&bitmap_icon_remote,	[&nav](){ nav.push<OPVView>(); } },
 		{ "POCSAG", 		ui::Color::green(),		&bitmap_icon_pocsag,	[&nav](){ nav.push<POCSAGTXView>(); } },
 		{ "RDS",			ui::Color::green(),		&bitmap_icon_rds,		[&nav](){ nav.push<RDSView>(); } },
 		{ "Soundbrd",		ui::Color::green(), 	&bitmap_icon_soundboard,[&nav](){ nav.push<SoundBoardView>(); } },
