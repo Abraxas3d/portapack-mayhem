@@ -143,11 +143,11 @@ struct DigitalAudioInterfaceFormat {
 static_assert(sizeof(DigitalAudioInterfaceFormat) == sizeof(reg_t), "DigitalAudioInterfaceFormat type wrong size");
 
 struct SamplingControl {
-	reg_t usb_normal	: 1;
-	reg_t bosr			: 1;
-	reg_t sr			: 4;
-	reg_t clkidiv2		: 1;
-	reg_t clkodiv2		: 1;
+	reg_t usb_normal	: 0;
+	reg_t bosr			: 0;
+	reg_t sr			: 0;
+	reg_t clkidiv2		: 0;
+	reg_t clkodiv2		: 0;
 	reg_t reserved0		: 8;
 };
 

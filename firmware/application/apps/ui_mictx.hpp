@@ -82,8 +82,8 @@ private:
 	bool rogerbeep_enabled { false };
 	bool rx_enabled { false };
 	uint32_t tone_key_index { };
-	float mic_gain { 1.0 };
-    uint8_t  ak4951_alc_GUI_selected { 0 }; 
+	float mic_gain { 2.0 };  //was 1.0
+	uint8_t  ak4951_alc_GUI_selected { 0 }; 
 	uint32_t audio_level { 0 };
 	uint32_t va_level { };
 	uint32_t attack_ms { };
@@ -91,7 +91,7 @@ private:
 	uint32_t attack_timer { 0 };
 	uint32_t decay_timer { 0 };
 	int32_t tx_gain { 47 };
-    bool rf_amp { false };
+	bool rf_amp { false };
 	int32_t rx_lna { 32 };
 	int32_t rx_vga { 32 };
 	bool rx_amp { false };

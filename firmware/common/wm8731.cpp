@@ -25,6 +25,7 @@
 namespace wolfson {
 namespace wm8731 {
 
+
 void WM8731::configure_interface_i2s_slave() {
 	write(DigitalAudioInterfaceFormat {
 		.format = 2,
@@ -64,14 +65,21 @@ void WM8731::init() {
 		.reserved0 = 0,
 	});
 
-	// write(SamplingControl {
-	// 	.usb_normal = 0,
-	// 	.bosr = 0,
-	// 	.sr = 0,
-	// 	.clkidiv2 = 0,
-	// 	.clkodiv2 = 0,
-	// 	.reserved0 = 0,
-	// });
+
+
+
+	write(SamplingControl {
+		.usb_normal = 0,
+		.bosr = 0,
+		.sr = 0,
+		.clkidiv2 = 1,
+		.clkodiv2 = 0,
+		.reserved0 = 0,
+	});
+
+
+
+
 
 	configure_interface_i2s_slave();
 
